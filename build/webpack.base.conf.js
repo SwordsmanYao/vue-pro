@@ -27,7 +27,7 @@ module.exports = {
   },
   resolve: {
     // 引入文件时自动补全的后缀名
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.vue', '.json', '.css'],
     // 别名 eg:@/components 代表src下的components目录的绝对路径
     alias: {
       'vue$': 'vue/dist/vue.esm.js',

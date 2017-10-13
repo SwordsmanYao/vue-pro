@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import '@/assets/css/app'
+
 // 关闭生产环境的一些提示
 Vue.config.productionTip = false
 
