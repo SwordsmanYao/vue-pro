@@ -63,8 +63,8 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {
-          // 图片小于10K直接生成base64打包到 js 文件中，否则为单独的文件放到name规定的路径下
-          limit: 10000,
+          // 图片小于1K直接生成base64打包到 js 文件中，否则为单独的文件放到name规定的路径下
+          limit: 1000,
           //name 文件名 hash:7 7位hash
           name: utils.assetsPath('img/[name].[hash:7].[ext]')
         }
@@ -73,7 +73,7 @@ module.exports = {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
         loader: 'url-loader',
         options: {
-          limit: 10000,
+          limit: 1000,
           name: utils.assetsPath('media/[name].[hash:7].[ext]')
         }
       },
@@ -81,7 +81,7 @@ module.exports = {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: 'url-loader',
         options: {
-          limit: 10000,
+          limit: 1000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       }
