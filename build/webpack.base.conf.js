@@ -20,7 +20,7 @@ module.exports = {
     path: config.build.assetsRoot,
     // 设置打包后文件名字
     filename: '[name].js',
-    // 设置请求静态资源的路径 生产环境/开发环境
+    // 设置请求静态资源的路径 生产/开发环境的
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
