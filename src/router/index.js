@@ -16,7 +16,9 @@ export default new Router({
     {
       path: '/',
       name: 'Hello',
-      component: HelloWorld
+      component: HelloWorld,
+      // 别名，访问/index也会跳转这个组件
+      alias: '/index'
     },
     {
       path: '/home',
@@ -32,6 +34,18 @@ export default new Router({
       path: '/about',
       name: 'About',
       component: About
+    },
+    // 不存在的页面重定向到home页
+    {
+      path: '*',
+      // redirect: '/home'
+      // redirect: {path: '/home'}
+      // redirect: {name: 'Home'}
+      redirect: (to) => {
+        // to -- 目标路由对象，访问路径的路由信息
+        console.log(to)
+        return '/home'
+      }
     }
   ]
 })

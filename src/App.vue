@@ -2,17 +2,16 @@
   <div id="app">
     <div class="nav-box">
       <ul class="nav">
-        <li>
-          <!--默认转换为 a 标签，设置 tag 可以转换为其他标签-->
-          <!--绑定数据的方式-->
-          <router-link :to="index" tag="div">home</router-link>
-        </li>
+
+        <!--默认转换为 a 标签，设置 tag 可以转换为其他标签, 设置 event="mouseover" 表示鼠标移入时切换-->
+        <!--绑定数据的方式-->
+        <router-link :to="index" tag="li" event="mouseover">home</router-link>
         <li>
           <!--传入对象的方式-->
-          <router-link :to="{path:'/document'}">document</router-link>
+          <router-link :to="{path:'/document'}" event="mouseover">document</router-link>
         </li>
         <li>
-          <router-link to="/about">about</router-link>
+          <router-link to="/about" event="mouseover">about</router-link>
         </li>
         <li></li>
       </ul>
