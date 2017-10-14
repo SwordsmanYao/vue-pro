@@ -42,12 +42,12 @@ const hotMiddleware = require('webpack-hot-middleware')(compiler, {
 // currently disabled until this is resolved:
 // https://github.com/jantimon/html-webpack-plugin/issues/680
 // 修改模板文件时热更新
-// compiler.plugin('compilation', function (compilation) {
-//   compilation.plugin('html-webpack-plugin-after-emit', function (data, cb) {
-//     hotMiddleware.publish({ action: 'reload' })
-//     cb()
-//   })
-// })
+compiler.plugin('compilation', function (compilation) {
+  compilation.plugin('html-webpack-plugin-after-emit', function (data, cb) {
+    hotMiddleware.publish({ action: 'reload' })
+    cb()
+  })
+})
 
 // enable hot-reload and state-preserving
 // compilation error display
