@@ -1,6 +1,6 @@
-# vue-pro
+# vue-router-study
 
-> A Vue.js project
+> it's only a study for vue-router
 
 ## Build Setup
 
